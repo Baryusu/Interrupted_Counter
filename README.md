@@ -1,5 +1,7 @@
 **3.2 Hands-on 2: The Interrupted Counter**
 **Goal:** Fix a counter app that resets to zero whenever the screen is rotated.
+
+
 **The “Sabotage” Code (Intentional Crash):** Integrate this code into your onCreate.
 You must fix the crash and explain why it happened in your README.
 
