@@ -24,13 +24,16 @@ myTextView . setText ( String . valueOf ( mCounter ) ) ;
 }
 
 **Why does it crashed?**
-The reason behind the problem existing in the first place was that the TextView object is null, and the next 
-line of code tries to call setText() function which triggers NullPointerException.
+The reason behind the problem existing in the first place was that the TextView 
+object is null, and the next line of code tries to call setText() function which triggers 
+NullPointerException.
+
 
 **Solution:**
 The TextView variable is assigned and linked to the actual UI component with the use of findViewById().
 Implementing a null check, ensures that the application will remain stable even if the view is nowhere 
 to be found or existed.
+
 
 **Why does the counter reset?**
 It is because in every activity lifecycle, it will go under the process Recreate/Destory 
@@ -38,5 +41,6 @@ phase which destroys local variables including the counter. Since screen rotatio
 Change, it will affect its instance and start from scratch. 
 
 **Solution:**
-Using both onSaveInstanceState and onRestoredInstanceState for the local variable to be saved into a key renamed as "COUNT_KEY". 
-Then it remembers the saved value and reassigns it once again to the counter variable, then updating UI using setText().
+Using both onSaveInstanceState and onRestoredInstanceState for the local variable to be saved into a key 
+renamed as "COUNT_KEY". Then it remembers the saved value and reassigns it once again to the counter 
+variable, then updating UI using setText().
