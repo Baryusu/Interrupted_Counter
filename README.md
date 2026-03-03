@@ -1,4 +1,5 @@
 **3.2 Hands-on 2: The Interrupted Counter**
+
 **Goal:** Fix a counter app that resets to zero whenever the screen is rotated.
 
 
